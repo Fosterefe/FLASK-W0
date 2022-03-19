@@ -1,0 +1,86 @@
+.user { 
+    overflow: auto;
+}
+
+.user::-webkit-scrollbar {
+    width: 12px;
+}
+
+.user::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+.user::-webkit-scrollbar-thumb {
+    background: #5e56f3;
+}
+
+.Pposts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 5%;
+    background-color: #5B54FA;
+}
+
+.Ppost {
+    background-color: #463de9;
+    cursor: pointer;
+}
+
+.Ppost img {
+    width: 80%;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.header h1 {
+    cursor: default;
+}
+
+.m {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .7);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease-out;
+}
+
+.m.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.full-img {
+    position: absolute;
+    width: 32%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.4);
+    transition: all .3s ease-out;
+}
+
+.full-img.open {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.m p {
+    color: white;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%, -3%);
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+    .full-img {
+        width: 70%;
+    }
+}

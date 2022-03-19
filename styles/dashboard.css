@@ -1,0 +1,177 @@
+.dash {
+    height: 89.6%;
+}
+
+.head {
+    height: 12%;
+}
+
+.fs-2 {
+    color: #1a1366;
+}
+
+.center {
+    padding: 0% 2% 1% 2%;
+    height: 88%;
+}
+
+.cdu {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #5B54FA;
+    padding: 5% 4%; 
+}
+
+.view {
+    background-color: #5148f1;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.create{
+    color: #120E43;
+}
+
+.df {
+    border: 2px solid black;
+}
+
+.ds {
+    width: 25%;
+    height: 15%;
+    color: black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transition: .3s;
+}
+
+.ds:hover {
+    color: #120E43;
+    width: 30%;
+}
+
+.view {
+    overflow:hidden;
+}
+
+.scroll {
+    overflow: auto;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 12px;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: #5e56f3;
+}
+
+.post {
+    background-color: #30336b;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.post img {
+    width: 60%;
+}
+
+.del-a {
+    background-color: hsl(0, 100%, 50%, 1);
+    border-radius: 3px;
+    text-decoration: none;
+    color: white;
+    padding: 1% 2%;
+    
+}
+
+.up-a {
+    background-color: hsl(160, 100%, 75%, .7);
+    border-radius: 3px;
+    text-decoration: none;
+    color: white;
+    padding: 1% 2%;
+}
+
+.del-a:hover {
+    color: white;
+    background-color: hsl(0, 100%, 50%, .8);
+}
+
+.up-a:hover {
+    color: white;
+    background-color: hsl(160, 100%, 75%, .5);
+}
+
+.custom {
+    display: none;
+}
+
+.dots {
+    width: 100%;
+    height: 20px;
+    display: flex;
+}
+
+.d {
+    margin-left: -.1%;
+}
+
+.dot {
+    width: 7px;
+    height: 7px;
+    background-color: wheat;
+    border-radius: 50px;
+}
+
+.delUp {
+    display: none;
+}
+
+.description {
+    color: white;
+}
+
+.post:hover .custom{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    color: white !important;
+}   
+
+.viewImage {
+    position: absolute;
+    width: 100%;
+    height: 89.6%;
+    background-color: hsl(0, 0%, 0%, .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.viewImage img {
+    width: 22%;
+    border-radius: 5px;
+}
+
+.viewImage h1 {
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 28rem;
+    top: 2rem;
+}
+
+.viewImage h1:hover {
+    color: white;
+    text-decoration: underline red;
+}   
+
+

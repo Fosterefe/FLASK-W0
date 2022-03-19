@@ -1,0 +1,30 @@
+.ctn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    background-color: rgb(247, 247, 247);;
+}
+
+.wrp {
+    height: 100%;
+    background-color: white;
+}
+
+.f {
+    height: 25%;
+    border: 1.6px solid black;
+    border-radius: 12px;
+}
+
+.f.btn {
+    border-radius: 40px;
+    font-weight: 600;
+    background: hsl(0, 0%, 1%);
+}
+
+.f.btn:hover {
+    background: hsl(0, 0%, 1%, 0.85)
+}
+
