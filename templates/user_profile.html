@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="user bg-info h-100">
+<div class="container d-flex flex-column align-items-start justify-content-center">
+    <div class="header w-100 mt-2">
+        <h1>{{ user.username }}</h1>
+    </div>
+    <div class="Pposts w-100 justify-content-center px-4 py-3 rounded" >
+        {% for p in posts %}
+            <div class="Ppost w-100 d-flex flex-column justify-content-center align-items-center mb-4 pt-4 rounded">
+                <img class="rounded" src={{p.image}} alt="{{p.description}}">
+                <p class="text-white mt-2">{{ p.description }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+</div>
+
+<div class="m">
+    <img src="" class="full-img rounded" >
+    <p class="caption"></p>
+</div>
+
+<script src="../static/logic/user_profile.js"></script>
+
+{% endblock %}

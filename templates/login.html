@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="ctn w-100 d-flex flex-column align-items-center justify-content-center">
+    <div class="wrp w-50 d-flex flex-column align-items-start justify-content-center px-5">
+        <h1 class="mt-4 fs-2 fw-bold" id="textt">Login Page</h1>
+        <br>
+        <br>
+            <form method="POST" class="w-100 h-50 d-flex flex-column align-items-start">
+                <!-- <label class="form-label fs-6 text-dark">Username</label>
+                <input class="f form-control text-dark w-75 mb-2" type="text" placeholder=""> -->
+                <!-- <label class="form-label fs-6 text-dark">Password</label>
+                <input class="f form-control text-dark w-75" type="password" placeholder=""> -->
+                <!-- <button class="f btn form-control text-white w-25 mb-0" type="submit">Register</button> -->
+                {{ form.hidden_tag() }}
+                {{ form.username.label() }}
+                {{ form.username(class="f form-control text-dark w-75 mb-2", placeholder="") }}
+                <br>
+                {{ form.password.label() }}
+                {{ form.password(class="f form-control text-dark w-75", placeholder="") }}
+                <br>
+                <br>
+                {{ form.submit(class="f btn form-control text-white w-25 mb-0") }}
+            </form>
+            <br>
+            <br>
+            <p>Don't have an account? <a href="/register">Register here!</a></p>
+    </div>
+</div>
+
+{% endblock %}

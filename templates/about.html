@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block login %}
+
+{% if login == False %}
+    <li class="nav-item">
+        <a class="nav-link" href="/register">Register</a>
+    </li>
+    {% elif login == True %}
+    <li class="nav-item">
+        <a class="nav-link" href="#">Logout</a>
+    </li>
+{% endif %}
+
+{% endblock %}
+
+{% block content %}
+<br>
+<h1 class="text-info fs-1">About us</h1>
+<br>
+<h6>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores reiciendis aliquid quam eum amet. Recusandae debitis eius nesciunt. Soluta architecto nam praesentium provident eveniet aliquid quasi, sed numquam nesciunt officia! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic id mollitia voluptatem porro sed nulla beatae placeat, odio ea, nostrum omnis voluptate quam quos consequuntur sapiente animi tempora quaerat quia.</h6>
+<h6>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem esse minus, ratione, amet voluptates ut molestias ipsam perspiciatis illo eos repudiandae a velit iste sit eligendi blanditiis suscipit odio optio cupiditate ea consequuntur error. Aut saepe dolor itaque suscipit voluptatum vero explicabo perspiciatis atque voluptatem mollitia quos, omnis delectus illum iste illo voluptate debitis. Dolor quod id facilis ducimus accusantium.</h6>
+<a href="/">Go to home page!</a>
+{% endblock %}

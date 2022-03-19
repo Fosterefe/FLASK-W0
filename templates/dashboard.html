@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="dash" class="dash w-100 bg-info d-flex flex-column">
+    <div id="head" class="head w-100 d-flex justify-content-center align-items-center">
+        <h1 class="fs-2 ">Start posting now!</h1>
+    </div>
+
+    <div class="center w-100  d-flex">
+        <div class="cdu w-100 h-100 d-flex flex-column">
+            {% if isUpdate %}
+                <h4 class="create">Update a post</h4>
+                {% else %}
+                <h4 class="create">Create a post</h4>
+            {% endif %}
+            {% if isUpdate == True %}
+                <form method="POST" class="form d-flex flex-column justify-content-evenly  h-75">
+                    <label>Image URL:</label>
+                    <input class="df form-control w-75", value={{image}} name="image">
+                    <label>Description:</label>
+                    <input class="df form-control w-75", value="{{descc}}" name="desc">
+                    <button class="ds btn btn-warning" type="submit">Update</button>
+                </form >
+                {% else %}
+                <form method="POST" class="form d-flex flex-column justify-content-evenly  h-75">
+                    {{ form.hidden_tag() }}
+                    {{ form.image.label() }}
+                    {{ form.image(class="df form-control w-75") }}
+
+                    {{ form.description.label() }}
+                    {{ form.description(class="df form-control w-75") }}
+
+                    {{ form.submit(class="ds btn btn-warning") }}
+                </form>
+            {% endif %}
+        </div>
+        <div class="view w-100 h-100 d-flex flex-column align-items-center justify-content-center p-0 m-0">
+            <div id="scroll" class="scroll w-100 h-100 d-flex flex-column align-items-center py-3">
+            {% for p in posts %}
+                <div class="post d-flex flex-column w-50 align-items-center m-0 mb-0 justify-content-center p-2 mb-3" target={{p.id}}>
+                    <img class="rounded" src={{p.image}}>
+                    <p class="description fs-6 m-0">{{p.description}}</p>
+
+                    <div class="custom  w-100">
+                        <div id="dots" class="dots w-100 justify-content-center align-items-center">
+                            <div class="d d-flex">
+                                <span class="dot ms-1"></span>
+                                <span class="dot ms-1"></span>
+                                <span class="dot ms-1"></span>
+                            </div>
+                        </div>
+                        <div id="delUp" class="delUp">
+                            <a class="del-a" href="/delete_post/{{p.id}}">Delete Post</a>
+                            <a class="up-a" href="/dashboard/update_post/{{p.id}}">Update Post</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                {% endfor %} 
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../static/logic/dashboard.js"></script>
+
+{% endblock %}

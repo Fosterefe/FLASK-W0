@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="home" class="home bg-info">
+<div class="container d-flex flex-column mt-4 align-items-center">
+{% for p in posts %}
+    <div class="card w-50 mb-3 ">
+        <h5 class="card-header">
+            <a class="userLink" href="/user/{{getUser(p.user_id)}}">{{ getUser(p.user_id) }}</a>
+        </h5>
+        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+          <img class="card-title rounded w-50" src={{p.image}} alt="{{p.description}}">
+          <p class="card-text text-white">{{ p.description }}</p>
+        </div>
+    </div>
+{% endfor %}
+</div>
+
+<div class="m">
+    <img src="" class="full-img rounded" >
+    <p class="caption">sadmsk</p>
+</div>
+
+</div>
+
+
+<script src="../static/logic/home.js"></script>
+
+{% endblock %}
